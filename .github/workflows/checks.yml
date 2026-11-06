@@ -1,0 +1,46 @@
+# Runs the tests, and the notebook through its launcher, on Windows, macOS and Linux.
+name: Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Tests on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.14.7"
+      - run: python -m pip install -r requirements.txt
+      - name: Dynamic program against brute force
+        run: python src/shapdp.py
+      - name: Automated tests
+        run: python -m unittest discover -s tests -v
+
+  notebook:
+    name: Notebook on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Launcher and notebook (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: launchers\open_on_windows.bat --check
+      - name: Launcher and notebook (macOS, Linux)
+        if: runner.os != 'Windows'
+        run: bash launchers/open_on_mac_or_linux.sh --check

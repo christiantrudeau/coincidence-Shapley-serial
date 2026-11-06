@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it, together with the paper it accompanies."
+type: software
+title: "Numerical study for: On the (non-)coincidence of the serial and Shapley solutions in multi-server queueing and scheduling problems"
+authors:
+  - family-names: Banerjee
+    given-names: Sreoshi
+  - family-names: Trudeau
+    given-names: Christian
+license: MIT
+repository-code: "https://github.com/christiantrudeau/coincidence-Shapley-serial"
+keywords:
+  - Shapley value
+  - serial rule
+  - scheduling
+  - queueing
+  - cost sharing

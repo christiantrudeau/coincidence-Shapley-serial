@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.env
+
+# Notebook
+.ipynb_checkpoints/
+outputs/
+
+# Private environment created by the launchers
+.study_environment/
+
+# Files written by a script run from the repository folder; reproduce_all.py writes to outputs/
+/*.json
+/*.tex
+/*.csv
+/fig_gap.*
+
+# System files
+desktop.ini
+Thumbs.db
+.DS_Store
