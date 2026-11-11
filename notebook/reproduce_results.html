@@ -7863,7 +7863,7 @@ the README has a link that opens it in Google Colab.</p>
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Settings</span>
 <span class="n">RUN_TESTS</span> <span class="o">=</span> <span class="kc">True</span>          <span class="c1"># part 7: about a minute</span>
-<span class="n">RUN_FULL_GRID</span> <span class="o">=</span> <span class="kc">False</span>     <span class="c1"># part 8: about 20 minutes on a laptop; False uses the saved results</span>
+<span class="n">RUN_FULL_GRID</span> <span class="o">=</span> <span class="kc">False</span>     <span class="c1"># part 8: about 20 minutes on a laptop, over half an hour on Colab; False uses the saved results</span>
 </pre></div>
 </div>
 </div>
@@ -8577,6 +8577,8 @@ Ran 13 tests in 146.192s
 <h2 id="8.-Optional:-all-78,480-problems">8. Optional: all 78,480 problems<a class="anchor-link" href="#8.-Optional:-all-78,480-problems">¶</a></h2><p>Set <code>RUN_FULL_GRID = True</code> at the top. The new file is compared with the saved one, value by value
 and byte by byte. Bytes can differ across machines through floating-point noise in the last digits;
 the designs, the flags and the values reported in the paper do not.</p>
+<p>This part takes about 20 minutes on a laptop and over half an hour on Google Colab, and it prints
+nothing until it ends. On Colab, keep the tab open; it is best run on your own computer.</p>
 </div>
 </div>
 </div>

@@ -7,6 +7,9 @@ authors:
     given-names: Sreoshi
   - family-names: Trudeau
     given-names: Christian
+  - family-names: Arias Rodas
+    given-names: Miguel Geovanny
+    orcid: "https://orcid.org/0000-0001-5346-0770"
 license: MIT
 repository-code: "https://github.com/christiantrudeau/coincidence-Shapley-serial"
 keywords:
