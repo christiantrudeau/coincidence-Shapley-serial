@@ -34,7 +34,7 @@ import zlib
 from run_grid import draw_x
 z = df[~df.any_diff]; maj = 0
 for r in z.itertuples():
-    rng = np.random.default_rng(zlib.crc32(f"{r.n}-{r.k}-{r.rho_target}-{r.dist}-{r.rep}".encode()))
+    rng = np.random.default_rng(zlib.crc32(f"{r.n}-{r.k}-{r.rho_target:g}-{r.dist}-{r.rep}".encode()))
     l = np.maximum(1, np.rint(r.k * r.rho_target * draw_x(r.dist, r.n, rng))).astype(int)
     maj += np.bincount(l).max() > r.n / 2
 S["coincide_majority_same_length_pct"] = P(maj / len(z))

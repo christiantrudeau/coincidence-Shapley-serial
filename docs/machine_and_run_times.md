@@ -7,6 +7,9 @@ Windows 11, Python 3.14.7, numpy 2.5.3.
 the first minutes and plugged in afterwards; a run entirely on battery took 1,880 s, so the figure is
 a guide rather than a precise benchmark.
 
+`src/robustness_b.py` (robustness check, 12,960 base problems and 213,840 variants), 14 processes,
+plugged in: 1,578 s, about 26 minutes.
+
 Mean time per problem, one process, plugged in (rho = 2, uniform lengths, 20 problems; measured by
 `src/benchmark.py`, saved in `results/benchmark.json`):
 

@@ -1,0 +1,24 @@
+{
+ "base_problems": 12960,
+ "rows": 213840,
+ "unchanged_problems_where_rules_differ": 0,
+ "rows_with_one_remainder": 42120,
+ "rows_with_one_remainder_where_rules_differ": 0,
+ "max_efficiency_error": 5.8e-11,
+ "smallest_nonzero_gap_periods": 0.0053,
+ "one_change_differ_pct_by_n": {
+  "5": 48.8,
+  "10": 66.5,
+  "20": 82.4,
+  "50": 90.0,
+  "100": 92.8
+ },
+ "one_change_median_gap_pct_by_n": {
+  "5": 0.0,
+  "10": 4.0,
+  "20": 4.9,
+  "50": 5.8,
+  "100": 5.7
+ },
+ "max_gap_over_bound": 0.5
+}
