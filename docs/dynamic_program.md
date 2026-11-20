@@ -169,9 +169,13 @@ for each agent i = 1, ..., n:
 **Cost.** For each agent, at most $n$ updates and $n$ weighted sums over the table, each $O(nk)$. This
 gives $O(n^2k)$ per agent and $O(n^3k)$ in total, with $O(nk)$ memory. The lengths enter only through
 $\Lambda_i$ and their remainders modulo $k$, so the running time does not depend on how long the jobs
-are. It grows linearly with $k$, not with its logarithm, so the algorithm is pseudo-polynomial. This is
-consistent with the #P-completeness result of Aziz and Banerjee (2025) cited in the paper. Run times are
-in [`machine_and_run_times.md`](machine_and_run_times.md): about 0.35 s per problem with 100 agents.
+are. It grows linearly with $k$, not with its logarithm, so the algorithm is pseudo-polynomial.
+Aziz, Banerjee and Ritossa, "Shapley Value of Scheduling Games: Algorithms and Complexity" (working
+paper, [PDF](https://cgi.cse.unsw.edu.au/~haziz/scheduling.pdf)), give a dynamic program with the same
+complexity, $O(n^3m)$ in their notation, where $m$ is the number of machines (our $k$). They also prove
+that computing the Shapley value is #P-complete, so an algorithm whose running time is polynomial in the
+number of digits of $k$ is not expected. Run times are in
+[`machine_and_run_times.md`](machine_and_run_times.md): about 0.35 s per problem with 100 agents.
 
 The serial rule needs only the $n$ total costs $C(N, \underline{\theta}^q)$ (function `serial_div`).
 
